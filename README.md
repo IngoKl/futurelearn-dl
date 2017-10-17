@@ -9,7 +9,7 @@ There are no doubt problems with this, but it seems to work on my initial tests
 ## Fork
 This repo is forked from: https://github.com/mjbright/futurelearn-dl.py
 
-This fork fixes some of the unicode issues, sanitizes filenames, and slightly improves PEP8 conformity.
+This fork fixes some of the unicode issues, sanitizes filenames, and slightly improves PEP8 conformity. The pdf/material download is still broken.
 
 Besides this, I have also added the HD fix from https://github.com/hwasiti/futurelearn-dl/.
 
@@ -64,5 +64,6 @@ or to get just week1:
 
 ## TODO:
 - ~~Fix unicode errors~~
+- Fix PDF/material download
 - Extend to more download types
 - Lots more ...
