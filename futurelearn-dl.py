@@ -56,7 +56,7 @@ headers = {
 # -- Functions: ---------------------------------------------------
 
 
-def strip_mostnonalphanum(str):
+def sanitize_filename(str):
     '''Replaces non-alphanumeric chracters. (except .-)'''
     return re.sub('[^0-9a-zA-Z.\-\/]+', '', str)
 
@@ -248,7 +248,7 @@ def getCourseWeekStepPage(course_id, week_id, step_id, week_num, page_title):
     mkdir_p(download_dir)
     #htmlfile = download_dir + '/' + course_id + '.s' + step_id + '.' + page_title + '.html'
     htmlfile = download_dir + '/' + page_title + '.html'
-    htmlfile = strip_mostnonalphanum(htmlfile)
+    htmlfile = sanitize_filename(htmlfile)
     writeFile(htmlfile, content)
 
     num_urls = 0
@@ -425,7 +425,7 @@ def downloadURLsInPage(course_id, week_id, step_id, week_num, content, DOWNLOAD_
 
 
 def downloadURLToFile(url, file, DOWNLOAD_TYPE):
-    file = strip_mostnonalphanum(file)
+    file = sanitize_filename(file)
 
     if not(OVERWRITE_NONEMPTY_FILES) and os.path.exists(file):
         statinfo = os.stat(file)
