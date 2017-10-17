@@ -6,6 +6,14 @@ There are no doubt problems with this, but it seems to work on my initial tests
 
 **TESTED**: Tested on Windows 8 under Cygwin, using Anaconda Python3.  Should work for other installations ... YMMV
 
+## Fork
+This repo is forked from: https://github.com/mjbright/futurelearn-dl.py
+This fork fixes some of the unicode issues, sanitizes filenames, and slightly improves PEP8 conformity.
+Besides this, I have also added the HD fix from https://github.com/hwasiti/futurelearn-dl/.
+
+Overall, however, the codebase is still the same.
+This is strictly 'Works for me!'.
+
 ## futurelearn-dl.py:
 
 First attempt at a Python3 version.
@@ -53,7 +61,6 @@ or to get just week1:
     export OP_DIR=e:/Education/FUTURELEARN
 
 ## TODO:
-- Fix unicode errors
+- ~~Fix unicode errors~~
 - Extend to more download types
 - Lots more ...
-
